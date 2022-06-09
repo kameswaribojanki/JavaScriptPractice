@@ -1,0 +1,37 @@
+let x=5;
+let y=6;
+let add=x+y;
+console.log(add);
+let mul=x*y;
+console.log(mul);
+//Arithmetic Operations
+let x1=100+200;
+console.log(x1);
+let x2=200-100;
+console.log(x2);
+let x3=100*100;
+console.log(x3);
+let x4=200/100;
+console.log(x4);
+let x5=200%100;
+console.log(x5);
+let i=5;
+i++;
+console.log(i);
+i--;
+console.log(i);
+let power=i**2;
+console.log(power);
+//Assignment Operators
+let y1=5;
+console.log(y1);
+y1+=5;
+console.log(y1);
+y1-=5;
+console.log(y1);
+y1*=5;
+console.log(y1);
+y1/=5;
+console.log(y1);
+y1%=5;
+console.log(y1);
