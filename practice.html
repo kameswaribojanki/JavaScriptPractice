@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Document</title>
+</head>
+<body>
+    <!-- <script>
+        var http=new XMLHttpRequest();
+        var url="https://jsonplaceholder.typicode.com/posts";
+        var method = "GET";
+        http.open(method,url);
+        http.send();
+        http.onreadystatechange=function(){
+            if(http.readyState===XMLHttpRequest.DONE){
+                console.log(JSON.parse(http.responseText));
+            }
+        }
+    </script> -->
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var http=new XMLHttpRequest();
+        var url="https://jsonplaceholder.typicode.com/posts";
+        var method = "GET";
+        var data='title=new&body=description';
+        http.open(method,url);
+        http.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        http.send(data);
+        http.onreadystatechange=function(){
+            if(http.readyState===XMLHttpRequest.DONE && http.status==200){
+                var response=JSON.parse(http.responseText);
+                bindPostsToTable(response);
+            }
+        }
+        function bindPostsToTable(postData){
+            var tableData="";
+            for(var i=0;i<postData.length;i++){
+                tableData+="<tr><td>"+postData[i].title+"</td><td>"+postData[i].body+"</td></tr>";
+            }
+            tableElement=document.querySelector("tbody");
+            tableElement.innerHTML=tableData;
+        }
+    </script>
+</body>
+</html>
