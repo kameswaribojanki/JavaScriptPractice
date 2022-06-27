@@ -68,3 +68,73 @@ var b = function maxOfArr(arrr){
     return Math.min.apply(null, arrr);
 }
 console.log(b(numArr1));
+//forEach()
+let samArr=[1,2,3,4,5];
+samArr.forEach((element,index)=>{
+    return console.log(element);
+})
+//map()
+console.log(
+    samArr.map((element,index)=>{
+        return element*2;
+    })
+)
+//filter()
+console.log(
+    samArr.filter((element,index)=>{
+        return element>3;
+    })
+)
+//reduce()
+console.log(
+    samArr.reduce((acc,element)=>{
+        return acc+element;
+    })
+)
+//reduceRight()
+console.log(
+    samArr.reduceRight((acc,element)=>{
+        return acc+element;
+    })
+)
+//every()
+console.log(
+    samArr.every((element,index)=>{
+        return element<=5;
+    })
+)
+//some()
+console.log(
+    samArr.some((element,index)=>{
+        return element>=5;
+    })
+)
+let samArr1=[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5];
+//indexOf()
+console.log(
+    samArr1.indexOf(5)
+)
+//lastIndexOf()
+console.log(
+    samArr1.lastIndexOf(5)
+)
+//find()
+console.log(
+    samArr.find((element,index)=>{
+        return element>3;
+    })
+)
+//findIndex()
+console.log(
+    samArr.findIndex((element,index)=>{
+        return element>3;
+    })
+)
+//Array.from()
+console.log(
+    Array.from("kameswari")
+)
+//includes()
+console.log(
+    samArr.includes(5)
+)
